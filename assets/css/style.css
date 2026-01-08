@@ -126,6 +126,40 @@ body{
   overflow-y: auto;      /* ✅ rolagem interna */
 }
 
+/* ========= MODO TELA CHEIA (sem a “barra/card”) ========= */
+/* Aplica só nos slides que têm background (as páginas do PDF) */
+.slide.has-bg .container{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+
+  max-height: none !important;
+  overflow: visible !important;
+
+  width: min(1200px, 92vw);
+  padding: 0;
+}
+
+/* Deixa o texto legível sem card */
+.slide.has-bg h1,
+.slide.has-bg h2,
+.slide.has-bg li,
+.slide.has-bg .kicker{
+  text-shadow: 0 8px 24px rgba(0,0,0,.55);
+}
+
+/* Um “tapete” sutil atrás do texto (bem leve, não vira barra) */
+.slide.has-bg .container::before{
+  content:"";
+  position:absolute;
+  inset: -18px -18px -18px -18px;
+  background: linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,.10) 55%, rgba(0,0,0,0));
+  border-radius: 22px;
+  z-index: -1;
+  pointer-events:none;
+}
+
 /* ================= TEXTO ================= */
 
 .kicker{
