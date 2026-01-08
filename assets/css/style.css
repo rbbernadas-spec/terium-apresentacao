@@ -60,6 +60,24 @@ body{
   pointer-events:auto;
 }
 
+/* Camada de fundo desfocada (evita “texto duplicado”) */
+.bg-layer{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  transform: scale(1.08);          /* evita bordas do blur */
+  filter: blur(16px) brightness(.55) saturate(.9);
+  opacity: .95;
+  z-index: 0;
+}
+
+/* Garante que o conteúdo fique por cima do fundo */
+.slide::before{ z-index: 1; }
+.slide.has-bg::after{ z-index: 1; }
+.container{ z-index: 2; position: relative; }
+
+
 /* fundos decorativos */
 .slide::before{
   content:"";

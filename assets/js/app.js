@@ -53,10 +53,15 @@ function wireKeys(){
 function buildSlide(section){
   const slide = document.createElement("section");
   slide.className = "slide";
-  if(section.bg){
-    slide.classList.add("has-bg");
-    slide.style.backgroundImage = `url(assets/img/${section.bg})`;
-  }
+ if(section.bg){
+  slide.classList.add("has-bg");
+
+  const bg = document.createElement("div");
+  bg.className = "bg-layer";
+  bg.style.backgroundImage = `url(assets/img/${section.bg})`;
+  slide.appendChild(bg);
+}
+
 
   const container = document.createElement("div");
   container.className = "container";
