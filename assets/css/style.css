@@ -14,9 +14,10 @@
           "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
 
-*{box-sizing:border-box}
+*{ box-sizing:border-box; }
 
-html,body{
+html, body{
+  width:100%;
   height:100%;
 }
 
@@ -25,34 +26,41 @@ body{
   font-family:var(--font);
   background: var(--bg);
   color: var(--fg);
-  overflow:auto; /* ✅ permite rolagem */
+  overflow:hidden; /* 🔒 impede empilhamento */
 }
 
+/* ================= APP ================= */
+
 #app{
-  min-height:100vh;
-  width:100%;
   position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
 }
 
 /* ================= SLIDES ================= */
 
 .slide{
-  position:relative;
-  min-height:100vh;
+  position:absolute;
+  inset:0;
   display:flex;
   align-items:center;
   justify-content:center;
   padding: clamp(20px, 4vw, 48px);
+
   opacity:0;
-  transform: translateY(16px);
-  transition: opacity .4s ease, transform .4s ease;
+  transform: translateY(18px) scale(.985);
+  transition: opacity .45s ease, transform .45s ease;
+  pointer-events:none;
 }
 
 .slide.active{
   opacity:1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  pointer-events:auto;
 }
 
+/* fundos decorativos */
 .slide::before{
   content:"";
   position:absolute;
@@ -85,9 +93,10 @@ body{
 /* ================= CONTAINER ================= */
 
 .container{
-  width:min(var(--maxw), 100%);
+  width: min(var(--maxw), 100%);
   position:relative;
   z-index:2;
+
   background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
@@ -95,8 +104,8 @@ body{
   box-shadow: var(--shadow);
   backdrop-filter: blur(10px);
 
-  max-height: 82vh;     /* ✅ não estoura a tela */
-  overflow-y: auto;     /* ✅ rolagem interna */
+  max-height: 82vh;      /* ✅ nunca estoura */
+  overflow-y: auto;      /* ✅ rolagem interna */
 }
 
 /* ================= TEXTO ================= */
@@ -125,7 +134,7 @@ h1{
 }
 
 h2{
-  margin:0 0 12px;
+  margin:0 0 14px;
   font-size: clamp(16px, 2vw, 22px);
   color:var(--muted);
   font-weight:500;
@@ -140,6 +149,20 @@ li{
   margin:10px 0;
   line-height:1.35;
   font-size: clamp(15px, 1.4vw, 19px);
+}
+
+/* ================= BOTÃO ================= */
+
+button.primary{
+  margin-top: 18px;
+  border:0;
+  cursor:pointer;
+  color:#061019;
+  font-weight:700;
+  padding:12px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 12px 28px rgba(139,231,192,.18);
 }
 
 /* ================= FOOTER ================= */
@@ -174,20 +197,6 @@ kbd{
   background: rgba(0,0,0,.25);
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 8px;
-}
-
-/* ================= BOTÃO ================= */
-
-button.primary{
-  margin-top: 18px;
-  border:0;
-  cursor:pointer;
-  color:#061019;
-  font-weight:700;
-  padding:12px 16px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow: 0 12px 28px rgba(139,231,192,.18);
 }
 
 /* ================= FLASHCARDS ================= */
