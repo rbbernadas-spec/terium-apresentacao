@@ -1,0 +1,194 @@
+
+:root{
+  --bg:#0b0f14;
+  --fg:#eef2f6;
+  --muted:#b7c0cc;
+  --card:#121a24cc;
+  --stroke:#ffffff1a;
+  --accent:#8be7c0;
+  --accent2:#8fc8ff;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 18px;
+  --maxw: 1100px;
+  --pad: 28px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  overflow:hidden;
+}
+#app{height:100%; width:100%; position:relative;}
+.slide{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  padding: clamp(18px, 4vw, 44px);
+  opacity:0; transform: translateY(18px) scale(.985);
+  transition: opacity .45s ease, transform .45s ease;
+  pointer-events:none;
+}
+.slide.active{
+  opacity:1; transform: translateY(0) scale(1);
+  pointer-events:auto;
+}
+.slide::before{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(1200px 700px at 15% 10%, rgba(255,255,255,.08), transparent 60%),
+              radial-gradient(900px 600px at 85% 35%, rgba(139,231,192,.10), transparent 55%),
+              radial-gradient(900px 600px at 65% 95%, rgba(143,200,255,.08), transparent 55%);
+  pointer-events:none;
+}
+.slide.has-bg{
+  background-size: cover;
+  background-position: center;
+}
+.slide.has-bg::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(90deg, rgba(10,14,18,.70), rgba(10,14,18,.35) 50%, rgba(10,14,18,.65));
+  pointer-events:none;
+}
+.container{
+  width:min(var(--maxw), 100%);
+  position:relative;
+  z-index:2;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: clamp(18px, 3vw, var(--pad));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+.kicker{
+  display:inline-flex; align-items:center; gap:10px;
+  color: var(--muted); font-size: 14px; letter-spacing:.12em; text-transform:uppercase;
+}
+.kicker .dot{width:8px;height:8px;border-radius:999px;background:var(--accent)}
+h1{margin:12px 0 8px; font-size: clamp(28px, 4vw, 52px); line-height:1.03}
+h2{margin:0; font-size: clamp(16px, 2vw, 22px); color:var(--muted); font-weight:500}
+ul{margin:18px 0 0; padding:0 0 0 18px; color: var(--fg)}
+li{margin:10px 0; line-height:1.35; font-size: clamp(15px, 1.6vw, 19px)}
+.footer{
+  position:absolute; left:20px; right:20px; bottom:14px;
+  display:flex; justify-content:space-between; align-items:center;
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
+  z-index: 3;
+}
+.pill{
+  display:inline-flex; gap:10px; align-items:center;
+  padding:10px 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+}
+kbd{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  padding: 3px 7px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.14);
+  border-bottom-color: rgba(255,255,255,.08);
+  border-radius: 8px;
+}
+button.primary{
+  margin-top: 18px;
+  border:0;
+  cursor:pointer;
+  color:#061019;
+  font-weight:700;
+  padding:12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 12px 28px rgba(139,231,192,.15);
+}
+button.primary:active{transform: translateY(1px)}
+/* Flashcards */
+.cards{
+  display:grid;
+  grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+  gap: 16px;
+  margin-top: 18px;
+}
+.card3d{
+  position:relative;
+  height: 190px;
+  perspective: 1000px;
+}
+.card3d .inner{
+  position:absolute; inset:0;
+  transition: transform .65s cubic-bezier(.2,.8,.2,1);
+  transform-style:preserve-3d;
+  border-radius: 16px;
+}
+.card3d.flipped .inner{transform: rotateY(180deg)}
+.face{
+  position:absolute; inset:0;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 10px 22px rgba(0,0,0,.20);
+  backface-visibility:hidden;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.face .label{
+  font-size: 12px;
+  color: rgba(255,255,255,.65);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.face .text{
+  font-size: 16px;
+  line-height:1.25;
+}
+.face.back{transform: rotateY(180deg)}
+.hint{color: rgba(255,255,255,.65); font-size: 13px; margin-top: 14px}
+/* Mindmap (tree) */
+.tree{
+  margin-top: 16px;
+  overflow:auto;
+  max-height: min(62vh, 560px);
+  padding-right: 10px;
+}
+.tree ul{list-style:none; padding-left: 18px; margin:0}
+.tree li{margin: 10px 0; padding-left: 12px; position:relative}
+.tree li::before{
+  content:"";
+  position:absolute;
+  left: -6px; top: 14px;
+  width: 14px; height:1px;
+  background: rgba(255,255,255,.18);
+}
+.node{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  max-width: 860px;
+}
+.node.root{
+  background: rgba(139,231,192,.12);
+  border-color: rgba(139,231,192,.28);
+}
+.toggle{
+  width: 28px; height: 28px;
+  display:grid; place-items:center;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(0,0,0,.18);
+  cursor:pointer;
+  user-select:none;
+  flex: 0 0 auto;
+}
+.toggle span{font-weight:900}
+.node-title{font-size: 15px; line-height:1.2}
+.collapsed > ul{display:none}
+.small{font-size: 12px; color: rgba(255,255,255,.65)}
