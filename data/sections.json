@@ -1,0 +1,178 @@
+{
+  "sections": [
+    {
+      "id": "capa",
+      "title": "Da Caixa ao Design",
+      "subtitle": "A jornada de inovação sustentável do TERIUM",
+      "bullets": [
+        "A segunda vida da embalagem, transformada em um material de infinitas possibilidades."
+      ],
+      "bg": "pdf_page_01.png"
+    },
+    {
+      "id": "oportunidade",
+      "title": "Tudo começa com uma oportunidade",
+      "subtitle": "",
+      "bullets": [
+        "Milhões de embalagens longa-vida são consumidas e descartadas.",
+        "Para a maioria, é o fim de um ciclo. Para nós, é o ponto de partida.",
+        "Plástico e alumínio valiosos, prontos para serem transformados."
+      ],
+      "bg": "pdf_page_02.png"
+    },
+    {
+      "id": "apresentacao",
+      "title": "Apresentamos o TERIUM",
+      "subtitle": "Inovação sustentável",
+      "bullets": [
+        "Um novo material, nascido da reciclagem consciente de caixas longa-vida.",
+        "Reaproveita 100% do plástico e do alumínio.",
+        "Cria chapas resistentes e versáteis — dando nova vida a recursos valiosos."
+      ],
+      "bg": "pdf_page_03.png"
+    },
+    {
+      "id": "visao-geral",
+      "title": "Visão geral em um clique",
+      "subtitle": "Explore o mindmap (expanda nos “+”)",
+      "type": "mindmap"
+    },
+    {
+      "id": "processo",
+      "title": "A jornada de um processo consciente",
+      "subtitle": "4 etapas para maximizar reaproveitamento e minimizar impacto",
+      "bullets": [
+        "1. Coleta seletiva",
+        "2. Reciclagem inteligente",
+        "3. Produção eficiente",
+        "4. Resultado final"
+      ],
+      "bg": "pdf_page_04.png"
+    },
+    {
+      "id": "etapa1",
+      "title": "1. Coleta seletiva",
+      "subtitle": "O início com propósito",
+      "bullets": [
+        "Parceria com cooperativas para a coleta pós-consumo.",
+        "Promove inclusão social e geração de renda."
+      ],
+      "bg": "pdf_page_05.png"
+    },
+    {
+      "id": "etapa2",
+      "title": "2. Reciclagem inteligente",
+      "subtitle": "A reengenharia da matéria",
+      "bullets": [
+        "Separação das fibras de papel da camada plástico-alumínio.",
+        "Papel reaproveitado em novas aplicações.",
+        "Plástico e alumínio seguem para se tornar a alma do TERIUM."
+      ],
+      "bg": "pdf_page_06.png"
+    },
+    {
+      "id": "etapa3",
+      "title": "3. Produção eficiente",
+      "subtitle": "A alquimia pura",
+      "bullets": [
+        "Sem uso de produtos químicos.",
+        "Apenas água e ar pressurizado para criar as chapas.",
+        "Material “puro” por natureza e por processo."
+      ],
+      "bg": "pdf_page_07.png"
+    },
+    {
+      "id": "etapa4",
+      "title": "4. Resultado final",
+      "subtitle": "O renascimento do material",
+      "bullets": [
+        "Resistente, colorido e versátil.",
+        "Uma matéria-prima nobre para criatividade e design."
+      ],
+      "bg": "pdf_page_08.png"
+    },
+    {
+      "id": "diferenciais",
+      "title": "Resistente. Versátil. Sustentável.",
+      "subtitle": "Por natureza",
+      "bullets": [
+        "Chapas em diferentes cores e texturas.",
+        "Material pensado para aplicações criativas e duráveis."
+      ],
+      "bg": "pdf_page_09.png"
+    },
+    {
+      "id": "criatividade",
+      "title": "Sua criatividade não tem barreiras",
+      "subtitle": "",
+      "bullets": [
+        "Superfície e estrutura aceitam uma vasta gama de acabamentos.",
+        "Crie produtos únicos com alto valor agregado."
+      ],
+      "bg": "pdf_page_10.png"
+    },
+    {
+      "id": "acabamentos1",
+      "title": "Impressão e acabamentos visuais",
+      "subtitle": "",
+      "bullets": [
+        "Impressão Offset, Digital e Serigrafia",
+        "Verniz (total ou com reserva)",
+        "Glitter e texturas especiais"
+      ],
+      "bg": "pdf_page_11.png"
+    },
+    {
+      "id": "acabamentos2",
+      "title": "Relevo, textura e acessórios",
+      "subtitle": "",
+      "bullets": [
+        "Hot Stamping (metalizado ou colorido)",
+        "Relevo (seco ou americano) e texturas",
+        "Botões, alças e adesivos"
+      ],
+      "bg": "pdf_page_12.png"
+    },
+    {
+      "id": "mais",
+      "title": "E muito mais",
+      "subtitle": "O limite é a sua ideia",
+      "bullets": [
+        "Combine acabamentos e formatos para criar experiências memoráveis."
+      ],
+      "bg": "pdf_page_13.png"
+    },
+    {
+      "id": "flashcards",
+      "title": "Flashcards",
+      "subtitle": "Clique para virar (pergunta ⇄ resposta)",
+      "type": "flashcards"
+    },
+    {
+      "id": "cta",
+      "title": "Que história o seu projeto vai contar com TERIUM?",
+      "subtitle": "",
+      "bullets": [
+        "Estamos prontos para ajudar a transformar suas ideias em realidade.",
+        "Vamos criar o próximo capítulo juntos."
+      ],
+      "bg": "pdf_page_14.png",
+      "cta": {
+        "label": "Fale com a gente",
+        "action": "goto:contato"
+      }
+    },
+    {
+      "id": "contato",
+      "title": "Confetti — Contato",
+      "subtitle": "",
+      "bullets": [
+        "papelaria@confetti.com.br",
+        "vendas@confetti.com.br",
+        "+55 11 5696 3600",
+        "www.confetti.com.br"
+      ],
+      "bg": "pdf_page_15.png"
+    }
+  ]
+}

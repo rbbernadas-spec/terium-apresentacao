@@ -1,0 +1,111 @@
+{
+  "title": "TERIUM: Inovação Sustentável",
+  "children": [
+    {
+      "title": "Composição do Material",
+      "children": [
+        {
+          "title": "Reciclagem pós-consumo"
+        },
+        {
+          "title": "Caixas longa-vida"
+        },
+        {
+          "title": "Plástico e Alumínio"
+        },
+        {
+          "title": "Diversas cores e texturas"
+        }
+      ]
+    },
+    {
+      "title": "Processo de Produção",
+      "children": [
+        {
+          "title": "1. Coleta Seletiva",
+          "children": [
+            {
+              "title": "Cooperativas"
+            },
+            {
+              "title": "Inclusão social"
+            }
+          ]
+        },
+        {
+          "title": "2. Reciclagem Inteligente",
+          "children": [
+            {
+              "title": "Separação do papel"
+            },
+            {
+              "title": "Reaproveitamento de materiais"
+            }
+          ]
+        },
+        {
+          "title": "3. Produção Eficiente",
+          "children": [
+            {
+              "title": "Sem produtos químicos"
+            },
+            {
+              "title": "Uso de água e ar pressurizado"
+            }
+          ]
+        },
+        {
+          "title": "4. Resultado Final",
+          "children": [
+            {
+              "title": "Material resistente"
+            },
+            {
+              "title": "Pronto para novas ideias"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Personalização e Acabamentos",
+      "children": [
+        {
+          "title": "Impressão: Offset, Digital e Serigrafia"
+        },
+        {
+          "title": "Verniz (total ou com reserva)"
+        },
+        {
+          "title": "Glitter e texturas especiais"
+        },
+        {
+          "title": "Hot Stamping (metalizado ou colorido)"
+        },
+        {
+          "title": "Relevo (seco ou americano)"
+        },
+        {
+          "title": "Botões, alças e adesivos"
+        }
+      ]
+    },
+    {
+      "title": "Contato",
+      "children": [
+        {
+          "title": "E-mail: papelaria@confetti.com.br"
+        },
+        {
+          "title": "E-mail: vendas@confetti.com.br"
+        },
+        {
+          "title": "Telefone: +55 11 5696 3600"
+        },
+        {
+          "title": "Site: www.confetti.com.br"
+        }
+      ]
+    }
+  ]
+}
